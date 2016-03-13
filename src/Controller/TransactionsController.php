@@ -26,7 +26,7 @@ class TransactionsController extends AppController
     public function transaction()
     {
         $this->RequestHandler->renderAs($this, 'json');
-        /*
+        
         if ($this->request->is('get')) {
             $id = $this->request->query['transaction_id'];
             try {
@@ -42,7 +42,7 @@ class TransactionsController extends AppController
                 $this->set('message', 'Could not get transaction with the given id');
                 $this->set('_serialize', ['error', 'message']);
             }
-        } else if ($this->request->is('post')) {*/
+        } else if ($this->request->is('post')) {
             $transaction = $this->Transactions->newEntity();
             $transaction->user_id = isset($this->request->query['user_id']) ? $this->request->query['user_id'] : null;
             $transaction->amount = isset($this->request->query['amount']) ? $this->request->query['amount'] : null;
@@ -56,6 +56,6 @@ class TransactionsController extends AppController
                 $this->set('message', $transaction->errors());
                 $this->set('_serialize', ['error', 'message']);
             }
-        //}
+        }
     }
 }
