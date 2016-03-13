@@ -218,16 +218,16 @@ return [
             'className' => 'Cake\Database\Connection',
             'driver' => 'Cake\Database\Driver\Mysql',
             'persistent' => false,
-            'host' => 'sanggon-serverchallenge.rhcloud.com',
+            'host' => 'ec2-54-83-57-25.compute-1.amazonaws.com',
             /**
              * CakePHP will use the default DB port based on the driver selected
              * MySQL on MAMP uses port 8889, MAMP users will want to uncomment
              * the following line and set the port accordingly
              */
             //'port' => 'non_standard_port_number',
-            'username' => 'admingFDy3WA',
-            'password' => 'grDkS53rGE7A',
-            'database' => 'sanggon',
+            'username' => 'pgackvuybqthmo',
+            'password' => 'rwmTpFOmtLdjAFYYIAOTFkaSrg',
+            'database' => 'd59cc7ln85t30o',
             'encoding' => 'utf8',
             'timezone' => 'UTC',
             'flags' => [],
@@ -253,7 +253,7 @@ return [
              */
             //'init' => ['SET GLOBAL innodb_stats_on_metadata = 0'],
             
-            'url' => env('DATABASE_URL', null),
+            'url' => 'postgres://pgackvuybqthmo:rwmTpFOmtLdjAFYYIAOTFkaSrg@ec2-54-83-57-25.compute-1.amazonaws.com:5432/d59cc7ln85t30o',//env('DATABASE_URL', null),
         ],
 
         /**
