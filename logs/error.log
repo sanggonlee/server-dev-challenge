@@ -20548,3 +20548,31 @@ Stack Trace:
 #3 {main}
 
 
+2016-03-13 03:40:27 Error: [Cake\Network\Exception\NotFoundException] Please replace Pages/home.ctp with your own version.
+Request URL: /CakePHP/
+Stack Trace:
+#0 /Applications/MAMP/htdocs/CakePHP/vendor/cakephp/cakephp/src/View/View.php(992): include()
+#1 /Applications/MAMP/htdocs/CakePHP/vendor/cakephp/cakephp/src/View/View.php(952): Cake\View\View->_evaluate('/Applications/M...', Array)
+#2 /Applications/MAMP/htdocs/CakePHP/vendor/cakephp/cakephp/src/View/View.php(587): Cake\View\View->_render('/Applications/M...')
+#3 /Applications/MAMP/htdocs/CakePHP/vendor/cakephp/cakephp/src/Controller/Controller.php(611): Cake\View\View->render('home', NULL)
+#4 /Applications/MAMP/htdocs/CakePHP/src/Controller/PagesController.php(57): Cake\Controller\Controller->render('home')
+#5 [internal function]: App\Controller\PagesController->display('home')
+#6 /Applications/MAMP/htdocs/CakePHP/vendor/cakephp/cakephp/src/Controller/Controller.php(429): call_user_func_array(Array, Array)
+#7 /Applications/MAMP/htdocs/CakePHP/vendor/cakephp/cakephp/src/Routing/Dispatcher.php(114): Cake\Controller\Controller->invokeAction()
+#8 /Applications/MAMP/htdocs/CakePHP/vendor/cakephp/cakephp/src/Routing/Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\PagesController))
+#9 /Applications/MAMP/htdocs/CakePHP/webroot/index.php(36): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#10 {main}
+
+
+2016-03-13 03:40:51 Error: [Cake\Datasource\Exception\InvalidPrimaryKeyException] Record not found in table "transactions" with primary key [NULL]
+Request URL: /CakePHP/Transactions
+Stack Trace:
+#0 /Applications/MAMP/htdocs/CakePHP/src/Controller/TransactionsController.php(67): Cake\ORM\Table->get(Array)
+#1 [internal function]: App\Controller\TransactionsController->transaction()
+#2 /Applications/MAMP/htdocs/CakePHP/vendor/cakephp/cakephp/src/Controller/Controller.php(429): call_user_func_array(Array, Array)
+#3 /Applications/MAMP/htdocs/CakePHP/vendor/cakephp/cakephp/src/Routing/Dispatcher.php(114): Cake\Controller\Controller->invokeAction()
+#4 /Applications/MAMP/htdocs/CakePHP/vendor/cakephp/cakephp/src/Routing/Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\TransactionsController))
+#5 /Applications/MAMP/htdocs/CakePHP/webroot/index.php(36): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#6 {main}
+
+
