@@ -26,17 +26,23 @@ class TransactionsController extends AppController
     public function transaction()
     {
         $this->RequestHandler->renderAs($this, 'json');
-        /*
+        
         if ($this->request->is('get')) {
             $id = $this->request->query['transaction_id'];
-            $transaction = $this->Transactions->get($id);
-            $this->set([
-                'product_id' => $transaction->product_id,
-                'user_id' => $transaction->user_id,
-                'amount' => $transaction->amount,
-                '_serialize' => ['product_id', 'user_id', 'amount']
-            ]);
-        } else if ($this->request->is('post')) {*/
+            try {
+                $transaction = $this->Transactions->get($id);
+                $this->set([
+                    'product_id' => $transaction->product_id,
+                    'user_id' => $transaction->user_id,
+                    'amount' => $transaction->amount,
+                    '_serialize' => ['product_id', 'user_id', 'amount']
+                ]);
+            } catch (Exception $e) {
+                $this->set('error', 'true');
+                $this->set('message', 'Could not get transaction with the given id');
+                $this->set('_serialize', ['error', 'message']);
+            }
+        } else if ($this->request->is('post')) {
             $transaction = $this->Transactions->newEntity();
             $transaction->user_id = isset($this->request->query['user_id']) ? $this->request->query['user_id'] : null;
             $transaction->amount = isset($this->request->query['amount']) ? $this->request->query['amount'] : null;
