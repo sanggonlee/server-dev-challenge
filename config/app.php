@@ -253,7 +253,7 @@ return [
              */
             //'init' => ['SET GLOBAL innodb_stats_on_metadata = 0'],
             
-            'url' => 'postgres://pgackvuybqthmo:rwmTpFOmtLdjAFYYIAOTFkaSrg@ec2-54-83-57-25.compute-1.amazonaws.com:5432/d59cc7ln85t30o',//env('DATABASE_URL', null),
+            'url' => /*'postgres://pgackvuybqthmo:rwmTpFOmtLdjAFYYIAOTFkaSrg@ec2-54-83-57-25.compute-1.amazonaws.com:5432/d59cc7ln85t30o',*/env('DATABASE_URL', null),
         ],
 
         /**
@@ -261,13 +261,13 @@ return [
          */
         'test' => [
             'className' => 'Cake\Database\Connection',
-            'driver' => 'Cake\Database\Driver\Mysql',
+            'driver' => 'Cake\Database\Driver\Postgres',
             'persistent' => false,
-            'host' => 'localhost',
+            'host' => 'ec2-54-83-57-25.compute-1.amazonaws.com',
             //'port' => 'non_standard_port_number',
-            'username' => 'my_app',
-            'password' => 'secret',
-            'database' => 'test_myapp',
+            'username' => 'pgackvuybqthmo',
+            'password' => 'rwmTpFOmtLdjAFYYIAOTFkaSrg',
+            'database' => 'd59cc7ln85t30o',
             'encoding' => 'utf8',
             'timezone' => 'UTC',
             'cacheMetadata' => true,
