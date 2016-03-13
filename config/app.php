@@ -253,7 +253,7 @@ return [
              */
             //'init' => ['SET GLOBAL innodb_stats_on_metadata = 0'],
             
-            'url' => /*'postgres://pgackvuybqthmo:rwmTpFOmtLdjAFYYIAOTFkaSrg@ec2-54-83-57-25.compute-1.amazonaws.com:5432/d59cc7ln85t30o',*/env('DATABASE_URL', null),
+            'url' => 'postgres://pgackvuybqthmo:rwmTpFOmtLdjAFYYIAOTFkaSrg@ec2-54-83-57-25.compute-1.amazonaws.com:5432/d59cc7ln85t30o',//env('DATABASE_URL', null),
         ],
 
         /**
@@ -274,7 +274,7 @@ return [
             'quoteIdentifiers' => false,
             'log' => false,
             //'init' => ['SET GLOBAL innodb_stats_on_metadata = 0'],
-            'url' => env('DATABASE_TEST_URL', null),
+            'url' => 'postgres://pgackvuybqthmo:rwmTpFOmtLdjAFYYIAOTFkaSrg@ec2-54-83-57-25.compute-1.amazonaws.com:5432/d59cc7ln85t30o',//env('DATABASE_TEST_URL', null),
         ],
     ],
 
