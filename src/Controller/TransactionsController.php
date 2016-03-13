@@ -56,6 +56,6 @@ class TransactionsController extends AppController
                 $this->set('message', $transaction->errors());
                 $this->set('_serialize', ['error', 'message']);
             }
-        //}
+        }
     }
 }
