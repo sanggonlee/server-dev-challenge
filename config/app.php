@@ -225,9 +225,9 @@ return [
              * the following line and set the port accordingly
              */
             //'port' => 'non_standard_port_number',
-            'username' => 'cakephp',
-            'password' => 'okok',
-            'database' => 'transaction_db',
+            'username' => 'admingFDy3WA',
+            'password' => 'grDkS53rGE7A',
+            'database' => 'sanggon',
             'encoding' => 'utf8',
             'timezone' => 'UTC',
             'flags' => [],
